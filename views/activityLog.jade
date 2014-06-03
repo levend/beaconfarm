@@ -1,0 +1,16 @@
+extends layout
+
+block body
+    h1 Beaconfarm
+    table.table.table-striped.table-condensed
+        thead
+            tr
+                th Name
+                th Timestamp
+                th Direction
+        tbody
+        each event in events
+            tr
+                td #{event.username}
+                td #{event.timestamp}
+                td #{event.eventType}

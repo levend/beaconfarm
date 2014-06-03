@@ -1,0 +1,11 @@
+{
+  "name": "beaconfarm",
+  "description": "Simple iBeacon endpoint",
+  "private": true,
+  "dependencies": {
+    "express": "3.x",
+    "mongoose": "^3.8.8",
+    "jade": "^1.3.0"
+  },
+  "engine": "node 0.10.*"
+}
