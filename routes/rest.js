@@ -2,12 +2,13 @@ var mongoose = require('mongoose')
 var RegionEvent = mongoose.model('RegionEvent')
 
 exports.registerRegionChange = function(req,res) {
-   console.log('Register');
+   console.log('Register'+ JSON.stringify(req.body));
 
    var newEvent = new RegionEvent({});
-   newEvent.regionId = "Region_1";
-   newEvent.username = "Balazs";
-   newEvent.eventType = "Enter";
+
+   newEvent.regionId = req.body.region;
+   newEvent.username = req.body.user;
+   newEvent.eventType = req.body.eventType;
 
 
    newEvent.save(function(err, savedEvent) {
