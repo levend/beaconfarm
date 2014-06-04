@@ -12,5 +12,5 @@ block body
         each event in events
             tr
                 td #{event.username}
-                td #{event.timestamp}
+                td #{event.localTime()}
                 td #{event.regionId} - #{event.eventType} 

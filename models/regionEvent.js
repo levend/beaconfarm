@@ -1,3 +1,5 @@
+var moment = require('moment');
+
 var mongoose = require('mongoose');
 
 var Schema   = mongoose.Schema;
@@ -10,5 +12,10 @@ var RegionEvent = new Schema({
     username : String,
     eventType :  String
 });
+
+RegionEvent.methods.localTime = function(){
+    return moment(this.timestamp).format("YYYY-MM-DD HH:mm:ss");
+    //return "alma";
+};
 
 RegionEvent = exports = mongoose.model('RegionEvent', RegionEvent);
