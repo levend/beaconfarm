@@ -14,7 +14,7 @@ var RegionEvent = new Schema({
 });
 
 RegionEvent.methods.localTime = function(){
-    return moment(this.timestamp).utc().format("YYYY-MM-DD HH:mm:ss");
+    return moment(this.timestamp).utc().zone("+02:00").format("YYYY-MM-DD HH:mm:ss");
     //return "alma";
 };
 
